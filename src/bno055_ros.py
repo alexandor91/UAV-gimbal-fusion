@@ -6,6 +6,7 @@ import numpy as np
 import BNO055
 
 import rospy
+from madgwickahrs import MadgwickAHRS
 from std_msgs.msg import Header, Float64
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import Quaternion
@@ -34,6 +35,7 @@ def publisher():
 
 	dataPub = rospy.Publisher('/imu/data', Imu, queue_size=3)
 	infoPub = rospy.Publisher('/imu/info', bno055_info, queue_size=3)
+	#filtereDataPub = rospy.Publisher('/imu/filtered_data', Imu_filtered, queue_size=3)
 	headingPub = rospy.Publisher('/imu/heading', Float64, queue_size=3)
 
 	load_calibration = rospy.get_param("~load_calibration", False)
