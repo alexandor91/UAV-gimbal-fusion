@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
   tf
 )
 
@@ -24,6 +25,36 @@ find_package(catkin REQUIRED COMPONENTS
 #find_package(PCL REQUIRED)
 #find_package(OpenCV REQUIRED)
 #find_package(Ceres REQUIRED)
+## Generate messages in the 'msg' folder
+add_message_files(
+    FILES
+    RPYAxes.msg
+#   Message1.msg
+#   Message2.msg
+)
+
+## Generate added messages and services with any dependencies listed here
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+###################################
+## catkin specific configuration ##
+###################################
+## The catkin_package macro generates cmake config files for your package
+## Declare things to be passed to dependent projects
+## INCLUDE_DIRS: uncomment this if your package contains header files
+## LIBRARIES: libraries you create in this project that dependent projects also need
+## CATKIN_DEPENDS: catkin_packages dependent projects also need
+## DEPENDS: system dependencies of this project that dependent projects also need
+catkin_package(
+  CATKIN_DEPENDS message_runtime
+#  INCLUDE_DIRS include
+#  LIBRARIES perception
+#  CATKIN_DEPENDS rospy std_msgs
+#  DEPENDS system_lib
+)
 
 include_directories(
   include
