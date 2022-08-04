@@ -1,9 +1,10 @@
 # UAV_Gimbal
 
 The UAV_Gimbal is a set of packages developed to stabilize a gimbal system through the mountain skyline. The repository packages are describe in the following list:
+
 a. [Altimeter](#altimeter)
 
-b. [Gimbal_controller](#gimbal controller)
+b. [Gimbal_controller](#controller)
 
 c. [Perception](#perception)
 
@@ -52,7 +53,7 @@ Allow execution permission to the *altimeter_node.py* file
 ```
 The *altitud* is given in meters and the *temperature* in Celsius degrees
 
-# Gimbal Controller
+# Controller
 The current package controls the orientation of a gimbal system built with 2 servos [Dynamixel xl430-w250-t](https://emanual.robotis.com/docs/en/dxl/x/xl430-w250/), the hardware interface used to communicate the servos with the Jetson Nano is the [OpenCR 2.0](https://emanual.robotis.com/docs/en/parts/controller/opencr10/).
 
 ## 1. Prerequisites
