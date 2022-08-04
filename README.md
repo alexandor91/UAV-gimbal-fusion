@@ -8,7 +8,7 @@ b. [Gimbal_controller](#controller)
 
 c. [Perception](#perception)
 
-d. [Particle_fusion](#particle fusion)
+d. [Particle_fusion](#particle_fusion)
 
 ## Prerequisites
 We tested the packages in **Ubuntu 18.04** and **ROS Melodic**, the system was run on a **Jetson Nano 2GB**.
@@ -127,7 +127,7 @@ roslaunch ros_deep_learning segnet.ros1.launch
 rosrun perception perception_node.py
 ```
 
-# Particle Fusion
+# Particle_Fusion
 The following package allows to identify the sky line and a ground plane from outdoor images in real time. It takes a stabilized image as a reference and detects the movement of subsequent frames to send the signal to the servos.
 
 ## 1. Prerequisites
