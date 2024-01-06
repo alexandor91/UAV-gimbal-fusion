@@ -158,3 +158,14 @@ roslaunch ros_deep_learning segnet.ros1.launch
 ```
 rosrun perception perception_node.py
 ```
+Appreciate a lot, if you cite the paper below when you use the code and "skyline" dataset.
+@inproceedings{kang2023adaptive,
+  title={Adaptive sampling-based particle filter for visual-inertial gimbal in the wild},
+  author={Kang, Xueyang and Herrera, Ariel and Lema, Henry and Valencia, Esteban and Vandewalle, Patrick},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={2738--2744},
+  year={2023},
+  organization={IEEE}
+}
+
+
